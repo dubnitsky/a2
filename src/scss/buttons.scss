@@ -1,0 +1,224 @@
+  .politics {
+    &::before {
+        content: "*";
+        position: absolute;
+        top: -6px;
+        right: -3px;
+        font-size: 13px;
+        color: rgba(0, 0, 0, .5);
+    }
+
+    &-warning {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #7d7d7d;
+        line-height: 110%;
+        
+    }
+  }
+  
+  .btn-title {
+        margin: 52px 0 8px 0;
+        color: #1A1A1A;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 120%;
+        text-align: center;
+    }
+
+.btn-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+
+  
+
+
+    
+}
+
+.btn__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    // justify-content: space-between; /* Стрелка справа */
+    user-select: none;
+  
+    padding: 17px 45px 17px 45px;
+
+    border-radius: 10px;
+    background: #6E533C;
+
+
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+
+    cursor: pointer;
+
+    &.active img {
+        transform: rotateX(180deg);
+    }
+}
+
+
+
+
+
+
+
+.btn__item-list {
+    display: none;
+    overflow: hidden;
+    padding: 20px 0 40px 0;
+
+    &.show {
+        display: block;
+    }
+ 
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 10px 0;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #C5C5C5;
+        }
+
+
+        &-title {
+            color: #1A1A1A;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 22px;
+        }
+
+        &-contact {
+            color: #6E533C;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+        }
+
+        &-messenger {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+
+            &__item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 5px;
+                color: #333333;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19px;
+
+                 &-ico {
+                    position: relative;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+
+
+        &-social {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            gap: 8px;
+            margin-top: 8px;
+            
+        
+            &__item {
+                display: inline-flex;
+                flex-direction: row;
+                align-self: flex-start;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 5px;
+                color: #333333;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19px;
+
+                &-ico {
+                    position: relative;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Контейнер стрелки */
+/* Обёртка стрелки для 3D-эффекта */
+.btn__arrow {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+  display: inline-flex;
+  width: 19px;
+  height: 11px;
+  perspective: 200px; /* Глубина 3D */
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+/* Сама стрелка */
+.btn__arrow img {
+  display: block;
+//   transform-style: preserve-3d;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+  will-change: transform;
+
+//   transform: rotateX(180deg);
+}
+
+
+
+/* Скрытие списка по умолчанию */
+
+
+.btn__item-list.show {
+  display: block;
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Анимация появления списка */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Контейнер стрелки */
+

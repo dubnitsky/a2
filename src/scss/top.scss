@@ -1,0 +1,48 @@
+.procode {
+
+
+    &-wrap {
+
+        & .btn-title {
+            margin: 40px 0 24px 0;
+        }
+    }
+
+    &-title {
+        margin: 0 0 8px 0;
+        color: #6E533C;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 140%;
+        text-align: center;
+    }
+
+    &-subtitle {
+        margin: 8px 0 0  0;
+        color: #6E533C;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%;
+        text-align: center;
+    }
+
+    &-code {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 14px 20px 14px 20px;
+
+        box-sizing: border-box;
+        border: 2px dashed #D9BEA5;
+        border-radius: 12px;
+        background: #FFF3E8;
+
+        color: #49301B;
+        font-size: 44px;
+        font-weight: 500;
+        line-height: 80%;
+        letter-spacing: 5%;
+        text-align: center;
+    }
+}

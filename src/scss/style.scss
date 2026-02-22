@@ -1,6 +1,18 @@
 @import "fonts";
+@import "normolize";
+@import "top";
+@import "buttons";
 
 
 body {
+    padding: 0 25px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 
+
+    & main {
+        max-width: 500px;
+        margin: 0 auto;
+    }
 }

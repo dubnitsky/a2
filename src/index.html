@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/head.html', {
-"title":"Главная"
+"title":"Контакты для реализации интерьера"
 })
 
 <body>
+    <main>
    @@include('html/header.html', {})
-   <main>
-      <img width="200px" height="200px" src="@img/a.jpg" alt="">
-   </main>
+  
+   @@include('html/top.html', {})
+   @@include('html/buttons.html', {})
+   
    @@include('html/footer.html', {})
+   </main>
    <script src="js/app.min.js"></script>
 </body>
 
